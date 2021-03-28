@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+<body>
+    <div class="header container">
+        <div class="page-header">
+          <h1>Example page header <small>Subtext for header</small></h1>
+          <a class="btn btn-success" href="/comment" target="_self">发表留言</a>
+        </div>
+    </div>
+    <div class="comments container" style="margin-top: 10px;">
+        <ul class="list-group" style="border: 1px solid #666;min-height: 300px;">
+          {{each comments}}
+          <li class="list-group-item">{{ $value.name }} ：{{ $value.message }} <span class="pull-right" style="float: right;">{{ $value.dateTime }}</span></li>
+          {{/each}}
+        </ul>
+      </div>
+    <!-- <img src="/public/img/nodejs-logo.png" alt=""> -->
+</body>
+<script src="/public/js/main.js"></script>
+<script>
+</script>
+</html>
